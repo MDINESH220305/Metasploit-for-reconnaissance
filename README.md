@@ -1,4 +1,4 @@
-# Metasploit-for-reconnaissance
+![etex55](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/651a04e0-fe98-432c-aece-1f87beafe929)# Metasploit-for-reconnaissance
 # Metasploit
 Metasploit for reconnaissance in pentesting
 
@@ -26,26 +26,30 @@ Open terminal and try execute some kali linux commands
 Find out the ip address of the attackers system
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/e78836ff-3a02-4474-9d98-ff90b8c2f719)
+
+![etex51](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/3f2fe54c-c76c-46e7-8deb-875e1f027682)
 
 ## Invoke msfconsole:
 
 
 ## OUTPUT:
+![etex52](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/25a9eac7-4642-417f-b1a4-8a30ae3a5425)
 
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/e466e06d-81ea-4478-ac63-68b697e13909)
+
 
 Type help or a question mark "?" to see the list of all available commands you can use inside msfconsole.
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/1fd66a50-f9d1-4ad8-b53a-a516e495cb0a)
+
+![etex53](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/a77fb0e7-1aea-4b7e-92f1-2eab6afd309e)
 
 ## Port Scanning:
 Following command is executed for scanning the systems on our local area network with a TCP scan (-sT) looking for open ports between 1 and 1000 (-p1-1000).
 msf >  nmap -sT 192.168.1810/24 -p1-1000
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/df7d774d-f7b1-471b-8d6b-eabf9b472517)
+
+![etex54](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/9e9cf8f4-a0ca-49b6-9271-dcb69331b373)
 
 ## step4:
 use the db-nmap command to scan and save the results into Metasploit's postgresql attached database. In that way, you can use those results in the exploitation stage later.
@@ -54,25 +58,30 @@ scan the targets with the command db_nmap as follows.
 msf > db_nmap 192.168.181.0/24
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/64fb43ae-877d-4f4c-baf9-2cc5ff2456c3)
+
+![etex55](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/219801dd-34cb-4d1e-bdcd-43e020540d2c)
 
 Metasploit has a multitude of scanning modules built in. If we open another terminal, we can navigate to Metasploit's auxiliary modules and list all the scanner modules.
 cd /usr/share /metasploit-framework/modules/auxiliary
-kali > ls -l
+kali > ls 
+
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/065dd682-6b33-4cf4-b5a8-c1091569234a)
+![etex56](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/2c65b89b-6cef-45a7-a845-3f4541411d06)
+
 
 Search is a powerful command in Metasploit that you can use to find what you want to locate. 
 msf >search name:Microsoft type:exploit
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/e1739073-b837-494f-bebd-bd44ddf8b01a)
+![etex57](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/f2d76946-1251-456b-9dec-ab42525777c0)
+
 
 The info command provides information regarding a module or platform,
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/3ac8e1fb-0fb5-4454-ae6c-8970bd9a0a53)
+![etex58](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/e44a4336-1bbc-4e13-83be-e0f0cf5f61b4)
+
 
 Before beginning, set up the Metasploit database by starting the PostgreSQL server and initialize msfconsole database as follows:
 systemctl start postgresql
@@ -82,13 +91,15 @@ Find the IP address of the Metasploitable machine first. Then, use the db_nmap c
 db_nmap -sV -sC -p 3306 <metasploitable_ip_address>
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/bd8b69cc-127b-4cdb-a901-0ec46bc2a537)
+![etex59](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/13e952ad-6ce1-4e5d-960b-772f972c5cdd)
+
 
 Use the search option to look for an auxiliary module to scan and enumerate the MySQL database.
 search type:auxiliary mysql
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/5849cbc8-5ed7-45fe-9e6a-4b67c7ddebc0)
+![etex510](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/7ea1951c-f0f4-49cc-a1a3-55a8b8f41779)
+
 
 use the auxiliary/scanner/mysql/mysql_version module by typing the module name or associated number to scan MySQL version details.
 use 11
@@ -96,18 +107,21 @@ Or:
 use auxiliary/scanner/mysql/mysql_version
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/da227f4e-8bdc-4bbc-81e9-71dd6cc00a53)
+![etex511](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/84a8f32b-4246-40c8-adb4-21a629dfaad3)
+
 
 Use the set rhosts command to set the parameter and run the module, as follows:
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/28993d34-f443-474b-96b6-7f9af29d830b)
+
+![etex512](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/9248b1d5-4e0e-4cc3-89be-44d22192dcb5)
 
 
 After scanning, you can also brute force MySQL root account via Metasploit's auxiliary(scanner/mysql/mysql_login) module.
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/a2926f7f-bfd0-4af6-aae3-22e6e7be9866)
+![etex513](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/e35fbef4-d419-4da0-bd85-46ff10d14176)
+
 
 set the PASS_FILE parameter to the wordlist path available inside /usr/share/wordlists:
 set PASS_FILE /usr/share/wordlistss/rockyou.txt
@@ -117,7 +131,8 @@ Set BLANK_PASSWORDS to true in case there is no password set for the root accoun
 set BLANK_PASSWORDS true
 
 ## OUTPUT:
-![image](https://github.com/AmirthaRoopaS/Metasploit-for-reconnaissance/assets/143496311/27925562-58ac-4784-8793-53ee611d02d7)
+
+![etex514](https://github.com/MDINESH220305/Metasploit-for-reconnaissance/assets/162429215/fc157f51-aad2-428d-bbe3-543acf421134)
 
 ## RESULT:
 The Metasploit framework for reconnaissance is  examined successfully
